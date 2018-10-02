@@ -33,7 +33,7 @@ cp -rf ./libraries/ ???
 
 ????
 
-Optionally you can install libraries from zip folder following [this instruction](https://www.arduino.cc/en/Guide/Libraries).
+Optionally you can install libraries from zip folder following [this instruction](https://www.arduino.cc/en/Guide/Libraries#toc4).
 
 
 
