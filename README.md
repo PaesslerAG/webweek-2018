@@ -27,15 +27,8 @@ or manually copy content of `libraries` folder to `Documents/Arduino/libraries`
 - Download [Adruino IDE](https://www.arduino.cc/download_handler.php)
 - Install [Adruino IDE](https://www.arduino.cc/download_handler.php?f=/arduino-1.8.7-linux64.tar.xz)
 - Copy required libraries
-```console
-cp -rf ./libraries/ ???
-```
-
-????
 
 Optionally you can install libraries from zip folder following [this instruction](https://www.arduino.cc/en/Guide/Libraries#toc4).
-
-
 
 
 
