@@ -1,5 +1,5 @@
 
-## New callback
+## DHT22 Data Uplink Callback
 
 
 Type: `DATA` `UPLINK`  
@@ -36,23 +36,17 @@ Body:
                 "value": {customData#dhtTemperature},
                 "float": "1",
                 "unit": "custom",
-                "customunit": "°C",
-                "limitminwarning": "0",
-                "limitminerror": "-5",
-                "limitmaxwarning": "25",
-                "limitmaxerror": "35"
-
+                "customunit": "°C"
+             
           },
           {
                 "channel": "Humidity",
                 "value": {customData#dhtHumidity},
                 "float": "1",
                 "unit": "custom",
-                "customunit": "%",
-                "limitmode": "1",
-                "limitminwarning": "25",
-                "limitminerror": "10"
-
+                "customunit": "%"
+ 
+             
           },
           {
                 "channel": "moduleTemperature",
@@ -60,14 +54,14 @@ Body:
                 "float": "1",
                 "unit": "custom",
                 "customunit": "°C"
-
+             
           },
           {
                 "channel": "moduleStatus",
                 "value": {customData#laststatus}
-
+             
           }
       ]
      }   
-}
+ }
 ```
