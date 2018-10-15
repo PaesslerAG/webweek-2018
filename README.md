@@ -9,9 +9,9 @@ Der Technologietrend IoT entwickelt sich rasant. Die #nueww 2018 bei Paessler st
 - Install [Adruino IDE](https://www.arduino.cc/en/Guide/MacOSX)
 - Copy required libraries
 ```console
-cp -rf ./libraries/* ~/Documents/Arduino/libraries
+cp -rf ./Libraries/* ~/Documents/Arduino/libraries
 ```
-or manually copy content of `libraries` folder to `Documents/Arduino/libraries`
+or manually copy content of `Libraries` folder to `Documents/Arduino/libraries`
 
 
 ### Install on Windows

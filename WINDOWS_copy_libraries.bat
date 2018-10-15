@@ -1,6 +1,6 @@
 echo %cd%
 
-set "LocalLibraries=%cd%\libraries"
+set "LocalLibraries=%cd%\Libraries"
 set "TargetLibraryFolder=%userprofile%\Documents\Arduino\libraries"
 
 xcopy /s "%LocalLibraries%\Adafruit_Sensor" "%TargetLibraryFolder%\Adafruit_Sensor" /i /y
