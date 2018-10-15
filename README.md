@@ -16,7 +16,7 @@ or manually copy content of `libraries` folder to `Documents/Arduino/libraries`
 
 ### Install on Windows
 - Download [Adruino IDE](https://www.arduino.cc/download_handler.php)
-- Install [Adruino IDE](https://www.arduino.cc/en/Guide/MacOSX)
+- Install [Adruino IDE](https://www.arduino.cc/en/Guide/Windows)
 - Execute `WINDOWS_copy_libraries.bat` from folder setup
   or manually copy content of `libraries` folder to `Documents\Arduino\libraries`
 
