@@ -5,7 +5,7 @@ Der Technologietrend IoT entwickelt sich rasant. Die #nueww 2018 bei Paessler st
 ## Arduino IDE installation
 ### Install on MacOSX
 
-- Download [Adruino IDE](https://www.arduino.cc/download_handler.php)
+- Download [Adruino IDE](https://s3-eu-west-1.amazonaws.com/web-week-2018/arduino-1.8.7-macosx.zip)
 - Install [Adruino IDE](https://www.arduino.cc/en/Guide/MacOSX)
 - Copy required libraries
 ```console
@@ -15,7 +15,7 @@ or manually copy content of `Libraries` folder to `Documents/Arduino/libraries`
 
 
 ### Install on Windows
-- Download [Adruino IDE](https://www.arduino.cc/download_handler.php)
+- Download [Adruino IDE](https://s3-eu-west-1.amazonaws.com/web-week-2018/arduino-1.8.7-windows.exe)
 - Install [Adruino IDE](https://www.arduino.cc/en/Guide/Windows)
 - Execute `WINDOWS_copy_libraries.bat` from folder setup
   or manually copy content of `libraries` folder to `Documents\Arduino\libraries`
