@@ -8,7 +8,7 @@
 #define SLEEPTIME     15 * 60 * 1000    // Set the delay to 15 minutes (15 min x 60 seconds x 1000 milliseconds)
 
 #define UINT16_t_MAX  65536
-#define INT16_t_MAX   UINT16_t_MAX/2
+#define INT16_t_MAX   UINT16_t_MAX/2    // = 32768
 
 int alarm_source = 0;
 
