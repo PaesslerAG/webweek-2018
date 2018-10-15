@@ -2,10 +2,10 @@
 #include "ArduinoLowPower.h"
 #include "DHT.h"
 
-#define DHTPIN        6                // What digital pin we're connected to
+#define DHTPIN        6                 // What digital pin we're connected to
 #define DHTTYPE       DHT22
-#define DEBUG         true             // Set DEBUG to false to disable serial prints
-#define SLEEPTIME     5 * 60 * 1000   // Set the delay to 15 minutes (15 min x 60 seconds x 1000 milliseconds)
+#define DEBUG         true              // Set DEBUG to false to disable serial prints
+#define SLEEPTIME     15 * 60 * 1000    // Set the delay to 15 minutes (15 min x 60 seconds x 1000 milliseconds)
 
 #define UINT16_t_MAX  65536
 #define INT16_t_MAX   UINT16_t_MAX/2
@@ -70,8 +70,8 @@ void loop() {
     return;
   }
 
-  msg.dhtTemperature = convertoFloatToInt16(t, 60, -60);
-  msg.dhtHumidity = convertoFloatToUInt16(h, 110);
+  msg.dhtTemperature = convertToFloatToInt16(t, 80, -40);
+  msg.dhtHumidity = convertToFloatToUInt16(h, 100);
 
   if (DEBUG) {
     Serial.print("Humidity: ");
@@ -89,7 +89,7 @@ void loop() {
 
   // We can only read the module temperature before SigFox.end()
   t = SigFox.internalTemperature();
-  msg.moduleTemperature = convertoFloatToInt16(t, 60, -60);
+  msg.moduleTemperature = convertToFloatToInt16(t, 60, -60);
 
   // Clears all pending interrupts
   SigFox.status();
@@ -114,12 +114,12 @@ void reboot() {
   while (1) ;
 }
 
-int16_t convertoFloatToInt16(float value, long max, long min) {
+int16_t convertToFloatToInt16(float value, long max, long min) {
   float conversionFactor = (float) (INT16_t_MAX) / (float)(max - min);
   return (int16_t)(value * conversionFactor);
 }
 
-uint16_t convertoFloatToUInt16(float value, long max) {
+uint16_t convertToFloatToUInt16(float value, long max) {
   float conversionFactor = (float) (UINT16_t_MAX) / (float)(max);
   return (uint16_t)(value * conversionFactor);
 }
