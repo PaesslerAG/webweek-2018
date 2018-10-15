@@ -1,12 +1,12 @@
 #define UINT16_t_MAX  65536
 #define INT16_t_MAX   UINT16_t_MAX/2
 
-int16_t convertoFloatToInt16(float value, long max, long min) {
+int16_t convertToFloatToInt16(float value, long max, long min) {
   float conversionFactor = (float) (INT16_t_MAX) / (float)(max - min);
   return (int16_t)(value * conversionFactor);
 }
 
-uint16_t convertoFloatToUInt16(float value, long max, long min = 0) {
+uint16_t convertToFloatToUInt16(float value, long max, long min = 0) {
   float conversionFactor = (float) (UINT16_t_MAX) / (float)(max - min);
   return (uint16_t)(value * conversionFactor);
 }
@@ -40,14 +40,14 @@ void sendSigfoxMessage() {
   // get the temperature value from the sigfox module
   float temperature = SigFox.internalTemperature();
   // convert the floating point value to an int16 value 
-  msg.moduleTemperature = convertoFloatToInt16(temperature, 60, -60);
+  msg.moduleTemperature = convertToFloatToInt16(temperature, 60, -60);
 
   // Clears all pending interrupts
   SigFox.status();
   delay(1);
 
   SigFox.beginPacket();
-  SigFox.write((uint8_t*)&msg, 6);
+  SigFox.write((uint8_t*)&msg, 12);
   int ret = SigFox.endPacket();
   SigFox.end();
 

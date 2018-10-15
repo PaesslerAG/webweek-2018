@@ -6,6 +6,8 @@
 #define DEEPSLEEP   15 * 60 * 1000   // Set the delay to 15 minutes (15 min x 60 seconds x 1000 milliseconds)
 #define SDSWARMUP   15 * 1000        // Run nova SDS011 for 15 seconds before taking the sensor data
 
+int alarm_source = 0;
+
 // create an instance of the sensor
 SdsDustSensor sds(Serial1);
 
@@ -23,6 +25,8 @@ SigfoxMessage msg;
 #include "sigfox_tools.h"
 
 void setup() {
+  LowPower.attachInterruptWakeup(RTC_ALARM_WAKEUP, alarmEvent0, CHANGE);
+  
   pinMode(LED_BUILTIN, OUTPUT);
 
   if (DEBUG) {
@@ -77,16 +81,16 @@ void reboot() {
 
 void querySensor() {
   msg.status = 0;
-  msg.pm25 = convertoFloatToInt16(0, 1000, 0);
-  msg.pm10 = convertoFloatToInt16(0, 1000, 0);
+  msg.pm25 = convertToFloatToInt16(0, 1000, 0);
+  msg.pm10 = convertToFloatToInt16(0, 1000, 0);
 
   sds.wakeup();
   delay(SDSWARMUP); // working for some seconds
   PmResult pm = sds.queryPm();
   msg.status |= pm.rawStatus;
   if (pm.isOk()) {
-    msg.pm25 = convertoFloatToInt16(pm.pm25, 1000, 0);
-    msg.pm10 = convertoFloatToInt16(pm.pm10, 1000, 0);
+    msg.pm25 = convertToFloatToInt16(pm.pm25, 1000, 0);
+    msg.pm10 = convertToFloatToInt16(pm.pm10, 1000, 0);
 
     if (DEBUG) {
       Serial.print(pm.pm25);
@@ -118,4 +122,8 @@ void printSensorInfo() {
   Serial.print("Sending every: ");
   Serial.print(DEEPSLEEP);
   Serial.println(" mSec");
+}
+
+void alarmEvent0() {
+  alarm_source = 0;
 }
