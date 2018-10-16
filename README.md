@@ -5,8 +5,8 @@ Der Technologietrend IoT entwickelt sich rasant. Die #nueww 2018 bei Paessler st
 ## Arduino IDE installation
 ### Install on MacOSX
 
-- Download [Adruino IDE](https://s3-eu-west-1.amazonaws.com/web-week-2018/arduino-1.8.7-macosx.zip)
-- Install [Adruino IDE](https://www.arduino.cc/en/Guide/MacOSX)
+- Download [Arduino IDE](https://s3-eu-west-1.amazonaws.com/web-week-2018/arduino-1.8.7-macosx.zip)
+- Install [Arduino IDE](https://www.arduino.cc/en/Guide/MacOSX)
 - Copy required libraries
 ```console
 cp -rf ./Libraries/* ~/Documents/Arduino/libraries
@@ -15,8 +15,8 @@ or manually copy content of `Libraries` folder to `Documents/Arduino/libraries`
 
 
 ### Install on Windows
-- Download [Adruino IDE](https://s3-eu-west-1.amazonaws.com/web-week-2018/arduino-1.8.7-windows.exe)
-- Install [Adruino IDE](https://www.arduino.cc/en/Guide/Windows)
+- Download [Arduino IDE](https://s3-eu-west-1.amazonaws.com/web-week-2018/arduino-1.8.7-windows.exe)
+- Install [Arduino IDE](https://www.arduino.cc/en/Guide/Windows)
 - Execute `WINDOWS_copy_libraries.bat` from folder setup
   or manually copy content of `libraries` folder to `Documents\Arduino\libraries`
 
@@ -24,8 +24,8 @@ or manually copy content of `Libraries` folder to `Documents/Arduino/libraries`
 
 ### Install on Linux
 
-- Download [Adruino IDE](https://www.arduino.cc/download_handler.php)
-- Install [Adruino IDE](https://www.arduino.cc/download_handler.php?f=/arduino-1.8.7-linux64.tar.xz)
+- Download [Arduino IDE](https://www.arduino.cc/download_handler.php)
+- Install [Arduino IDE](https://www.arduino.cc/download_handler.php?f=/arduino-1.8.7-linux64.tar.xz)
 - Copy required libraries
 
 Optionally you can install libraries from zip folder following [this instruction](https://www.arduino.cc/en/Guide/Libraries#toc4).
