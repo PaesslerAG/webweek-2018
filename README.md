@@ -38,4 +38,4 @@ Optionally you can install libraries from zip folder following [this instruction
 - Start Arduino IDE
 - Go to `Tools` > `Board: <board>` > `Boards Manager...`
 - Enter `MKR FOX` in the search field
-- Install `Arduino SAMD Boards (32-bits ARM Cortex-M0+) by Arduino`
+- Install `Arduino SAMD Boards (32-bits ARM Cortex-M0+) by Arduino` Version `1.6.19`
