@@ -17,9 +17,7 @@ typedef struct __attribute__ ((packed)) sigfox_message {
   int16_t dhtTemperature;
   uint16_t dhtHumidity;
   uint8_t lastMessageStatus;
-}
-
-SigfoxMessage;
+} SigfoxMessage;
 
 // Stub for message which will be sent
 SigfoxMessage msg;
@@ -89,7 +87,7 @@ void loop() {
 
   // We can only read the module temperature before SigFox.end()
   t = SigFox.internalTemperature();
-  msg.moduleTemperature = convertToFloatToInt16(t, 80, -40);
+  msg.moduleTemperature = convertToFloatToInt16(t, 60, -60);
 
   // Clears all pending interrupts
   SigFox.status();

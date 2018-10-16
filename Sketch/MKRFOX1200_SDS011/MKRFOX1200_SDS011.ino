@@ -18,6 +18,7 @@ typedef struct __attribute__ ((packed)) sigfox_message {
   uint16_t pm25;
   uint16_t pm10;
 } SigfoxMessage;
+
 // Stub for message which will be sent
 SigfoxMessage msg;
 
