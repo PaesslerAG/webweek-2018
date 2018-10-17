@@ -50,3 +50,7 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+.DS_Store
+Sketch/MKRFOX1200_DHT22_simple/MKRFOX1200_DHT22_simple.ino
+Sketch/MKRFOX1200_DHT22_simple/MKRFOX1200_DHT22_simple.ino
